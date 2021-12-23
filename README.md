@@ -1,10 +1,9 @@
 <div align="center">
   <!-- Logo and Title -->
   <img src="/src/main/resources/assets/orion/logo.png">
-  <h1>Orion</h1>
-  <p>Orion is a combat addon for Meteor Client</p>
+  <h1>UWU Client</h1>
+  <p>UWU is a combat addon for Meteor Client</p>
 
-  <sub>[GhostTypes](https://github.com/GhostTypes) has discontinued both Orion and Ion. This is a continuation branch, however this may soon also end support.</sub>
   <!-- Fancy badges -->
   <a href="https://anticope.ml/pages/MeteorAddons.html"><img src="https://img.shields.io/badge/Verified%20Addon-Yes-blueviolet"></a>
   <img src="https://img.shields.io/github/last-commit/AntiCope/orion">
@@ -21,8 +20,9 @@ Download the [latest release](https://github.com/AntiCope/orion/releases/latest)
 Launch fabric loader for 1.17.1.
 
 # Discord
-GhostTypes has retired from both Orion and Ion. Ion went to new ownership, and Orion has been left unmaintained.
+Join UWU Cult Discord! 
 
+https://discord.gg/24rwFwgcwt
 # Suggestions & Bugs
 If you have a suggestion, please check if the feature already exists before making a suggestion.
 If you have a bug to report, please makesure you have the latest dev build of both Meteor and Orion.
@@ -41,7 +41,7 @@ To top it all off, please provide as much information as you can (eg. Screenshot
 - Bed Disabler
 - Burrow Breaker
 - Nametags Plus
-- Orion Rich Presence
+- UWU Custom Rich Presence
 - Self Trap Plus
 - Surround Plus
 - Auto Login
@@ -53,7 +53,7 @@ To top it all off, please provide as much information as you can (eg. Screenshot
 - KD Ratio
 
 ### Hud
-- Orion Welcome Message
+- UWU Welcome Message
 - Item Counter
 	- Beds
 	- Crystals
@@ -64,3 +64,5 @@ To top it all off, please provide as much information as you can (eg. Screenshot
 - Death Counter
 - Highscore Counter
 - Visual Keybinds
+ 
+more will be addded soon! 
