@@ -74,11 +74,10 @@ public class Orion extends MeteorAddon {
         hud.elements.add(new Welcome(hud));
 
         Config.get().customWindowTitleText = "UWU CLient - " + Orion.VERSION;
-	}
+
 
 	@Override
-	public void onRegisterCategories() {
-		Modules.registerCategory(CATEGORY);
+	public void onRegisterCategories() { Modules.registerCategory(CATEGORY);
 	}
 }
     @EventHandler
