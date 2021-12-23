@@ -51,6 +51,7 @@ public class Orion extends MeteorAddon {
         Modules.get().add(new RPC());
         Modules.get().add(new SelfTrapPlus());
         Modules.get().add(new SurroundPlus());
+        Modules.get().add(new ChorusPredict());
 
         //HUD
         HUD hud = Modules.get().get(HUD.class);
@@ -79,4 +80,27 @@ public class Orion extends MeteorAddon {
 	public void onRegisterCategories() {
 		Modules.registerCategory(CATEGORY);
 	}
+}
+    @EventHandler
+    private void onGameJoin(GameJoinedEvent event) {
+        VectorUtils.members();
+    }
+    
+    @EventHandler
+    private void onTick(TickEvent.Post event) {
+        if (screen != null && mc.currentScreen == null) {
+            mc.setScreen(screen);
+            screen = null;
+        }
+    }
+
+    @EventHandler
+    private void onMessageReceive(ReceiveMessageEvent event) {
+        for (Player player : Players.get()) {
+            if (!event.getMessage().getString().contains("muted " + player.name) && player.muted && event.getMessage().getString().contains(player.name)) {
+                System.out.println(event.getMessage().getString());
+                event.cancel();
+            }
+        }
+    }
 }
