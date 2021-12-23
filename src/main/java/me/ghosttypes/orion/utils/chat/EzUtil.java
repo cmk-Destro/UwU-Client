@@ -34,7 +34,7 @@ public class EzUtil {
         if (ezMessage.contains("{player}")) ezMessage = ezMessage.replace("{player}", playerName);
         if (popCounter.doPlaceholders.get()) ezMessage = Placeholders.apply(ezMessage);
         if (popCounter.killStr.get()) { ezMessage = ezMessage + " | Killstreak: " + Stats.killStreak; }
-        if (popCounter.suffix.get()) { ezMessage = ezMessage + " | Orion " + Orion.VERSION; }
+        if (popCounter.suffix.get()) { ezMessage = ezMessage + " | UWU CLIENT " + Orion.VERSION; }
         mc.player.sendChatMessage(ezMessage);
         if (popCounter.pmEz.get()) Wrapper.messagePlayer(playerName, StringHelper.stripName(playerName, ezMessage));
     }

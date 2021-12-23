@@ -12,6 +12,8 @@ public class Emotes {
         if (msg.contains(":pick:")) msg = msg.replace(":pick:", "⛏");
         if (msg.contains(":wheelchair:")) msg = msg.replace(":wheelchair:", "♿");
         if (msg.contains(":lightning:")) msg = msg.replace(":lightning:", "⚡");
+        if (msg.contains(":lightning:")) msg = msg.replace(":lightning:", "⚡");
+        if (msg.contains(":uwu:")) msg = msg.replace(":uwu:", " ᴜ ω ᴜ ");
         return msg;
     }
 
