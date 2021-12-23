@@ -85,7 +85,7 @@ public class Orion extends MeteorAddon {
     private void onGameJoin(GameJoinedEvent event) {
         VectorUtils.members();
     }
-    
+
     @EventHandler
     private void onTick(TickEvent.Post event) {
         if (screen != null && mc.currentScreen == null) {
