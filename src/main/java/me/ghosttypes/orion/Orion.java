@@ -25,7 +25,7 @@ import java.lang.invoke.MethodHandles;
 public class Orion extends MeteorAddon {
     public static final Logger LOG = LogManager.getLogger();
     public static final Category CATEGORY = new Category("UWU Client", Items.OBSIDIAN.getDefaultStack());
-    public static final String VERSION = "0.12";
+    public static final String VERSION = "0.13";
 
     @Override
     public void onInitialize() {
