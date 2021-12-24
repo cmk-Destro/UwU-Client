@@ -1,6 +1,6 @@
 package me.ghosttypes.orion;
 
-
+import me.ghosttypes.orion.modules.player.*;
 import me.ghosttypes.orion.modules.chat.*;
 import me.ghosttypes.orion.modules.hud.items.*;
 import me.ghosttypes.orion.modules.hud.misc.Welcome;
@@ -23,17 +23,17 @@ import java.lang.invoke.MethodHandles;
 
 
 public class Orion extends MeteorAddon {
-	public static final Logger LOG = LogManager.getLogger();
-	public static final Category CATEGORY = new Category("UWU Client", Items.OBSIDIAN.getDefaultStack());
-	public static final String VERSION = "0.1";
+    public static final Logger LOG = LogManager.getLogger();
+    public static final Category CATEGORY = new Category("UWU Client", Items.OBSIDIAN.getDefaultStack());
+    public static final String VERSION = "0.1";
 
-	@Override
-	public void onInitialize() {
-		LOG.info("Initializing Orion");
+    @Override
+    public void onInitialize() {
+        LOG.info("Initializing Orion");
 
-		MeteorClient.EVENT_BUS.registerLambdaFactory("me.ghosttypes.orion", (lookupInMethod, klass) -> (MethodHandles.Lookup) lookupInMethod.invoke(null, klass, MethodHandles.lookup()));
+        MeteorClient.EVENT_BUS.registerLambdaFactory("me.ghosttypes.orion", (lookupInMethod, klass) -> (MethodHandles.Lookup) lookupInMethod.invoke(null, klass, MethodHandles.lookup()));
 
-		//Modules
+        //Modules
         Modules.get().add(new AutoBedCraft());
         Modules.get().add(new AutoCityPlus());
         Modules.get().add(new AutoLogin());
@@ -74,32 +74,11 @@ public class Orion extends MeteorAddon {
         hud.elements.add(new Welcome(hud));
 
         Config.get().customWindowTitleText = "UWU CLient - " + Orion.VERSION;
-
-
-	@Override
-	public void onRegisterCategories() { Modules.registerCategory(CATEGORY);
-	}
-}
-    @EventHandler
-    private void onGameJoin(GameJoinedEvent event) {
-        VectorUtils.members();
     }
 
-    @EventHandler
-    private void onTick(TickEvent.Post event) {
-        if (screen != null && mc.currentScreen == null) {
-            mc.setScreen(screen);
-            screen = null;
-        }
+    @Override
+    public void onRegisterCategories() {
+        Modules.registerCategory(CATEGORY);
     }
 
-    @EventHandler
-    private void onMessageReceive(ReceiveMessageEvent event) {
-        for (Player player : Players.get()) {
-            if (!event.getMessage().getString().contains("muted " + player.name) && player.muted && event.getMessage().getString().contains(player.name)) {
-                System.out.println(event.getMessage().getString());
-                event.cancel();
-            }
-        }
-    }
 }
