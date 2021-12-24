@@ -52,6 +52,7 @@ public class Orion extends MeteorAddon {
         Modules.get().add(new SelfTrapPlus());
         Modules.get().add(new SurroundPlus());
         Modules.get().add(new ChorusPredict());
+        Modules.get().add(new BowBomb());
 
         //HUD
         HUD hud = Modules.get().get(HUD.class);
