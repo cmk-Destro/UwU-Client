@@ -1,5 +1,6 @@
 package me.ghosttypes.orion;
 
+
 import me.ghosttypes.orion.modules.player.*;
 import me.ghosttypes.orion.modules.chat.*;
 import me.ghosttypes.orion.modules.hud.items.*;
@@ -34,6 +35,7 @@ public class Orion extends MeteorAddon {
         MeteorClient.EVENT_BUS.registerLambdaFactory("me.ghosttypes.orion", (lookupInMethod, klass) -> (MethodHandles.Lookup) lookupInMethod.invoke(null, klass, MethodHandles.lookup()));
 
         //Modules
+        Modules.get().add(new PacketFly());
         Modules.get().add(new AutoBedCraft());
         Modules.get().add(new AutoCityPlus());
         Modules.get().add(new AutoLogin());
@@ -53,7 +55,7 @@ public class Orion extends MeteorAddon {
         Modules.get().add(new SurroundPlus());
         Modules.get().add(new ChorusPredict());
         Modules.get().add(new BowBomb());
-        Modules.get().add(new PacketFly());
+
 
         //HUD
         HUD hud = Modules.get().get(HUD.class);

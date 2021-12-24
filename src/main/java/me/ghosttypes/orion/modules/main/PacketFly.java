@@ -1,4 +1,4 @@
-package me.ghosttypes.orion.main;
+package me.ghosttypes.orion.modules.main;
 
 import me.ghosttypes.orion.Orion;
 import me.ghosttypes.orion.utils.misc.SystemTimer;
@@ -324,6 +324,7 @@ public class PacketFly extends Module {
     public PacketFly() {
         super(Orion.CATEGORY, "packet-fly", "Fly with packets.");
     }
+
 
     @Override
     public void onActivate() {
