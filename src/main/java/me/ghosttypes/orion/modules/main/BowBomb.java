@@ -58,7 +58,7 @@ public class BowBomb extends Module {
     private long lastShootTime;
 
     public BowBomb() {
-        super(VectorAddon.CATEGORY, "bow-bomb", "");
+        super(Orion.CATEGORY, "bow-bomb", "");
     }
 
     @Override
