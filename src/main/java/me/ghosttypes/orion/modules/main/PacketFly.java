@@ -322,7 +322,7 @@ public class PacketFly extends Module {
     private static final Random random = new Random();
 
     public PacketFly() {
-        super(VectorAddon.CATEGORY, "packet-fly", "Fly with packets.");
+        super(Orion.CATEGORY, "packet-fly", "Fly with packets.");
     }
 
     @Override
