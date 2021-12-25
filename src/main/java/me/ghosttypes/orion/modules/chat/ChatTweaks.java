@@ -21,7 +21,7 @@ public class ChatTweaks extends Module {
 
     public final Setting<Boolean> emotes = sgGeneral.add(new BoolSetting.Builder().name("emotes").description("Enables the Ghostware emote system.").defaultValue(false).build());
     public final Setting<Boolean> customPrefix = sgGeneral.add(new BoolSetting.Builder().name("custom-prefix").description("Lets you set a custom prefix.").defaultValue(false).build());
-    public final Setting<String> prefixText = sgGeneral.add(new StringSetting.Builder().name("custom-prefix-text").description("Override the [Orion] prefix.").defaultValue("Orion").visible(customPrefix :: get).build());
+    public final Setting<String> prefixText = sgGeneral.add(new StringSetting.Builder().name("custom-prefix-text").description("Override the [Orion] prefix.").defaultValue("UWU Client").visible(customPrefix :: get).build());
     public final Setting<Boolean> customPrefixColor = sgGeneral.add(new BoolSetting.Builder().name("custom-prefix-color").description("Lets you set a custom prefix.").defaultValue(false).build());
     public final Setting<Boolean> chromaPrefix = sgGeneral.add(new BoolSetting.Builder().name("chroma-prefix").description("Lets you set a custom prefix.").defaultValue(false).build());
     public final Setting<Double> chromaSpeed = sgGeneral.add(new DoubleSetting.Builder().name("chroma-speed").description("Speed of the chroma animation.").defaultValue(0.09).min(0.01).sliderMax(5).decimalPlaces(2).visible(chromaPrefix :: get).build());
@@ -54,7 +54,7 @@ public class ChatTweaks extends Module {
     public LiteralText getPrefix() {
         BaseText logo = new LiteralText("");
         LiteralText prefix = new LiteralText("");
-        String logoT = "Orion";
+        String logoT = "UWU Client";
         if (customPrefix.get()) logoT = prefixText.get();
         if (customPrefixColor.get() && !chromaPrefix.get()) logo.append(new LiteralText(logoT).setStyle(logo.getStyle().withColor(TextColor.fromRgb(prefixColor.get().getPacked()))));
         if (chromaPrefix.get() && !customPrefixColor.get()) {
@@ -63,7 +63,7 @@ public class ChatTweaks extends Module {
         }
         if (!customPrefixColor.get() && !chromaPrefix.get()) {
             if (customPrefix.get()) { logo.append(prefixText.get());
-            } else { logo.append("Orion"); }
+            } else { logo.append("UWU Client"); }
             logo.setStyle(logo.getStyle().withFormatting(Formatting.RED));
         }
         if (themeBrackets.get()) {
