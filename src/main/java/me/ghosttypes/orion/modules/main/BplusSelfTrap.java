@@ -41,7 +41,7 @@ public class BplusSelfTrap extends Module {
     private final Setting<Boolean> disableOnYChange = sgToggle.add(new BoolSetting.Builder().name("disable-on-y-change").description("Automatically disables when your y level (step, jumping, atc).").defaultValue(false).build());
     private final Setting<Boolean> onEat = sgToggle.add(new BoolSetting.Builder().name("disable-on-chorus/pearl").description("Automatically disables when you eat chorus or throw a pearl (pearl dont work if u use middle click extra)").defaultValue(false).build());
 
-    public static SurroundPlus INSTANCE;
+    public static BplusSelfTrap INSTANCE;
 
     private BlockPos lastPos = new BlockPos(0, -100, 0);
     private int ticks = 0;

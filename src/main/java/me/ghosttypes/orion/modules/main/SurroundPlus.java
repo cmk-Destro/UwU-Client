@@ -66,6 +66,7 @@ public class SurroundPlus extends Module {
     }};
 
 
+
     public SurroundPlus() {
         super(Orion.CATEGORY, "surround-plus", "Surround v2.");
     }

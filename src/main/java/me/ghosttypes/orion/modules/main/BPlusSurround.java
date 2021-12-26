@@ -33,7 +33,7 @@ import java.util.Arrays;
 import java.util.List;
 
 
-public class BplusSurround extends Module {
+public class BPlusSurround extends Module {
     private final SettingGroup sgGeneral = settings.getDefaultGroup();
     private final SettingGroup sgToggle = settings.createGroup("Different Toggle Modes");
     private final SettingGroup sgModules = settings.createGroup("Other Module Toggles");
@@ -65,7 +65,7 @@ public class BplusSurround extends Module {
     private final Setting<Boolean> toggleStrafe = sgModules.add(new BoolSetting.Builder().name("toggle-strafe+").description("Toggles off strafe+ when activating surround.").defaultValue(false).build());
     private final Setting<Boolean> toggleBack = sgModules.add(new BoolSetting.Builder().name("toggle-back").description("Toggles on speed or surround when turning off surround.").defaultValue(false).build());
 
-    public static SurroundPlus INSTANCE;
+    public static BplusSelfTrap INSTANCE;
 
     private BlockPos lastPos = new BlockPos(0, -100, 0);
     private int ticks = 0;
@@ -87,7 +87,7 @@ public class BplusSurround extends Module {
 
     Modules modules = Modules.get();
 
-    public BplusSurround() {
+    public BPlusSurround() {
         super(Orion.CATEGORY1, "surround+", "Surrounds you in blocks to prevent you from taking lots of damage.");
     }
 

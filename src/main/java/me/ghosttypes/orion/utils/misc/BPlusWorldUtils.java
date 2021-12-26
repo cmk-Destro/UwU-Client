@@ -1,6 +1,6 @@
 package me.ghosttypes.orion.utils.misc;
 
-import me.ghosttypes.orion.modules.main.BplusSurround;
+import me.ghosttypes.orion.modules.main.BPlusSurround;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import net.minecraft.block.*;
 import net.minecraft.client.MinecraftClient;
@@ -86,7 +86,7 @@ public class BPlusWorldUtils {
                 neighbor = pos.offset(side);
                 side2 = side.getOpposite();
 
-                if (mc.world.getBlockState(neighbor).isAir() || mc.world.getBlockState(neighbor).getBlock() instanceof FluidBlock || (Modules.get().get(BplusSurround.class).ignoreOpenable.get() &&
+                if (mc.world.getBlockState(neighbor).isAir() || mc.world.getBlockState(neighbor).getBlock() instanceof FluidBlock || (Modules.get().get(BPlusSurround.class).ignoreOpenable.get() &&
                     mc.world.getBlockState(neighbor).getBlock() instanceof AnvilBlock
                     || mc.world.getBlockState(neighbor).getBlock() instanceof CraftingTableBlock
                     || mc.world.getBlockState(neighbor).getBlock() instanceof ChestBlock
