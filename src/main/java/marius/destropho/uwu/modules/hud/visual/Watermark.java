@@ -1,7 +1,7 @@
 package marius.destropho.uwu.modules.hud.visual;
 
 
-import marius.destropho.uwu.Orion;
+import marius.destropho.uwu.UWU;
 import marius.destropho.uwu.modules.chat.ChatTweaks;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import meteordevelopment.meteorclient.systems.modules.render.hud.HUD;
@@ -16,7 +16,7 @@ public class Watermark extends DoubleTextHudElement {
     protected String getRight() {
         ChatTweaks chatTweaks = Modules.get().get(ChatTweaks.class);
         if (chatTweaks.isActive() && chatTweaks.customPrefix.get()) {
-            return chatTweaks.prefixText.get() + " " + Orion.VERSION;
+            return chatTweaks.prefixText.get() + " " + UWU.VERSION;
         }
-        return "UWU Client " + Orion.VERSION; }
+        return "UWU Client " + UWU.VERSION; }
 }

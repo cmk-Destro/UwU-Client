@@ -1,6 +1,6 @@
 package marius.destropho.uwu.modules.main;
 
-import marius.destropho.uwu.Orion;
+import marius.destropho.uwu.UWU;
 import marius.destropho.uwu.utils.Wrapper;
 import marius.destropho.uwu.utils.world.BlockHelper;
 import meteordevelopment.meteorclient.events.render.Render3DEvent;
@@ -73,7 +73,7 @@ public class SelfTrapPlus extends Module {
 
 
     public SelfTrapPlus(){
-        super(Orion.CATEGORY, "self-trap-plus", "Places obsidian around your head.");
+        super(UWU.CATEGORY, "self-trap-plus", "Places obsidian around your head.");
     }
 
     @Override

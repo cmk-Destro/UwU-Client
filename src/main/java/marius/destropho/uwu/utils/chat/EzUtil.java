@@ -1,6 +1,6 @@
 package marius.destropho.uwu.utils.chat;
 
-import marius.destropho.uwu.Orion;
+import marius.destropho.uwu.UWU;
 import marius.destropho.uwu.modules.chat.PopCounter;
 import marius.destropho.uwu.modules.main.BedAura;
 import marius.destropho.uwu.utils.Wrapper;
@@ -34,7 +34,7 @@ public class EzUtil {
         if (ezMessage.contains("{player}")) ezMessage = ezMessage.replace("{player}", playerName);
         if (popCounter.doPlaceholders.get()) ezMessage = Placeholders.apply(ezMessage);
         if (popCounter.killStr.get()) { ezMessage = ezMessage + " | Killstreak: " + Stats.killStreak; }
-        if (popCounter.suffix.get()) { ezMessage = ezMessage + " | UWU CLIENT " + Orion.VERSION; }
+        if (popCounter.suffix.get()) { ezMessage = ezMessage + " | UWU CLIENT " + UWU.VERSION; }
         mc.player.sendChatMessage(ezMessage);
         if (popCounter.pmEz.get()) Wrapper.messagePlayer(playerName, StringHelper.stripName(playerName, ezMessage));
     }

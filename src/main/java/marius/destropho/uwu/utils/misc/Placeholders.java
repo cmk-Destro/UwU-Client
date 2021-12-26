@@ -1,7 +1,7 @@
 package marius.destropho.uwu.utils.misc;
 
 
-import marius.destropho.uwu.Orion;
+import marius.destropho.uwu.UWU;
 import marius.destropho.uwu.utils.Wrapper;
 import meteordevelopment.meteorclient.utils.Utils;
 import meteordevelopment.meteorclient.utils.player.PlayerUtils;
@@ -17,7 +17,7 @@ public class Placeholders {
         if (m.contains("{deaths}")) m = m.replace("{deaths}", String.valueOf(Stats.deaths));
         if (m.contains("{server}")) m = m.replace("{server}", Utils.getWorldName());
         if (m.contains("{version}")) m = m.replace("{version}", SharedConstants.getGameVersion().getName());
-        if (m.contains("{uwuversion}")) m = m.replace("{uwuversion}", Orion.VERSION);
+        if (m.contains("{uwuversion}")) m = m.replace("{uwuversion}", UWU.VERSION);
         if (m.contains("{random}")) m = m.replace("{random}", String.valueOf(Wrapper.randomNum(1, 9)));
         if (m.contains("{username}")) m = m.replace("{username}", mc.getSession().getUsername());
         if (m.contains("{hp}")) m = m.replace("{hp}", String.valueOf(Math.rint(PlayerUtils.getTotalHealth())));

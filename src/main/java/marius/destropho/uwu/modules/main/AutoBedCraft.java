@@ -1,6 +1,6 @@
 package marius.destropho.uwu.modules.main;
 
-import marius.destropho.uwu.Orion;
+import marius.destropho.uwu.UWU;
 import marius.destropho.uwu.utils.Wrapper;
 import marius.destropho.uwu.utils.player.InvHelper;
 import marius.destropho.uwu.utils.player.ItemHelper;
@@ -49,7 +49,7 @@ public class AutoBedCraft extends Module {
     private final Setting<Double> minHealth = sgAuto.add(new DoubleSetting.Builder().name("min-health").description("Min health require to activate.").defaultValue(10).min(1).max(36).sliderMax(36).build());
 
     public AutoBedCraft() {
-        super(Orion.CATEGORY, "auto-bed-craft", "Automatically craft beds.");
+        super(UWU.CATEGORY, "auto-bed-craft", "Automatically craft beds.");
     }
 
 

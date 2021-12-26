@@ -1,6 +1,6 @@
 package marius.destropho.uwu.modules.main;
 
-import marius.destropho.uwu.Orion;
+import marius.destropho.uwu.UWU;
 import marius.destropho.uwu.utils.vector.VectorUtils;
 import meteordevelopment.meteorclient.events.render.Render3DEvent;
 import meteordevelopment.meteorclient.events.world.TickEvent;
@@ -219,7 +219,7 @@ public class VectorCevBreaker extends Module {
     private int timer;
 
     public VectorCevBreaker() {
-        super(Orion.CATEGORY,"cev-breaker", "Places and explodes crystals on top of the target.");
+        super(UWU.CATEGORY,"cev-breaker", "Places and explodes crystals on top of the target.");
     }
 
     @Override

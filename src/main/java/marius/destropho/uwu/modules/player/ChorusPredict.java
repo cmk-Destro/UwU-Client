@@ -1,6 +1,6 @@
 package marius.destropho.uwu.modules.player;
 
-import marius.destropho.uwu.Orion;
+import marius.destropho.uwu.UWU;
 import meteordevelopment.meteorclient.events.packets.PacketEvent;
 import meteordevelopment.meteorclient.events.render.Render3DEvent;
 import meteordevelopment.meteorclient.events.world.TickEvent;
@@ -59,7 +59,7 @@ public class ChorusPredict extends Module {
     private Vec3d pos;
 
     public ChorusPredict() {
-        super(Orion.CATEGORY, "chorus-predict", "Predicts the spot where the chorus-fruit will teleport you.");
+        super(UWU.CATEGORY, "chorus-predict", "Predicts the spot where the chorus-fruit will teleport you.");
     }
 
     @Override

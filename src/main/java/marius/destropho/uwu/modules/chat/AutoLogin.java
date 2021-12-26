@@ -1,6 +1,6 @@
 package marius.destropho.uwu.modules.chat;
 
-import marius.destropho.uwu.Orion;
+import marius.destropho.uwu.UWU;
 import meteordevelopment.meteorclient.events.game.ReceiveMessageEvent;
 import meteordevelopment.meteorclient.settings.Setting;
 import meteordevelopment.meteorclient.settings.SettingGroup;
@@ -23,7 +23,7 @@ public class AutoLogin extends Module {
     }};
 
     public AutoLogin() {
-        super(Orion.CATEGORY, "auto-login", "Automatically log into servers that use /login.");
+        super(UWU.CATEGORY, "auto-login", "Automatically log into servers that use /login.");
     }
 
 

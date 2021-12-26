@@ -2,7 +2,7 @@ package marius.destropho.uwu.modules.chat;
 
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
-import marius.destropho.uwu.Orion;
+import marius.destropho.uwu.UWU;
 import marius.destropho.uwu.utils.Wrapper;
 import marius.destropho.uwu.utils.chat.EzUtil;
 import marius.destropho.uwu.utils.misc.Placeholders;
@@ -55,7 +55,7 @@ public class PopCounter extends Module {
     private int updateWait = 45;
 
     public PopCounter() {
-        super(Orion.CATEGORY, "pop-counter", "Count player's totem pops.");
+        super(UWU.CATEGORY, "pop-counter", "Count player's totem pops.");
     }
     private int announceWait;
 
@@ -101,7 +101,7 @@ public class PopCounter extends Module {
             String popMessage = getPopMessage((PlayerEntity) entity);
             if (doPlaceholders.get()) popMessage = Placeholders.apply(popMessage);
             String name = entity.getEntityName();
-            if (suffix.get()) { popMessage = popMessage + " | Orion " + Orion.VERSION; }
+            if (suffix.get()) { popMessage = popMessage + " | Orion " + UWU.VERSION; }
             mc.player.sendChatMessage(popMessage);
             if (pmOthers.get()) Wrapper.messagePlayer(name, StringHelper.stripName(name, popMessage));
             announceWait = announceDelay.get() * 20;

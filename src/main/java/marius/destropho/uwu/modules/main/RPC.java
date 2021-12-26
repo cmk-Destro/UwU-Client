@@ -3,7 +3,7 @@ package marius.destropho.uwu.modules.main;
 import club.minnced.discord.rpc.DiscordEventHandlers;
 import club.minnced.discord.rpc.DiscordRPC;
 import club.minnced.discord.rpc.DiscordRichPresence;
-import marius.destropho.uwu.Orion;
+import marius.destropho.uwu.UWU;
 import marius.destropho.uwu.utils.misc.Placeholders;
 import marius.destropho.uwu.utils.misc.Stats;
 import meteordevelopment.meteorclient.events.world.TickEvent;
@@ -32,7 +32,7 @@ public class RPC extends Module {
     public static final DiscordRPC instance = DiscordRPC.INSTANCE;
 
     public RPC() {
-        super(Orion.CATEGORY, "RPC", "UWU Client RPC for Discord!");
+        super(UWU.CATEGORY, "RPC", "UWU Client RPC for Discord!");
     }
     private int alertDelay = 0;
     private int updateDelay;

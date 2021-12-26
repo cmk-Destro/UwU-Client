@@ -1,6 +1,6 @@
 package marius.destropho.uwu.modules.main;
 
-import marius.destropho.uwu.Orion;
+import marius.destropho.uwu.UWU;
 import marius.destropho.uwu.utils.Wrapper;
 import marius.destropho.uwu.utils.world.BlockHelper;
 import marius.destropho.uwu.utils.player.AutomationUtils;
@@ -88,7 +88,7 @@ public class AnchorAura extends Module {
     private boolean sentAntiStuck;
 
     public AnchorAura() {
-        super(Orion.CATEGORY, "anchor-aura-plus", "Anchor Aura v2.");
+        super(UWU.CATEGORY, "anchor-aura-plus", "Anchor Aura v2.");
     }
 
     @Override

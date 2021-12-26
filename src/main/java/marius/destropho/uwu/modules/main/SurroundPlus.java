@@ -1,6 +1,6 @@
 package marius.destropho.uwu.modules.main;
 
-import marius.destropho.uwu.Orion;
+import marius.destropho.uwu.UWU;
 import marius.ghosttypes.orion.utils.world.*;
 import meteordevelopment.meteorclient.events.render.Render3DEvent;
 import meteordevelopment.meteorclient.events.world.TickEvent;
@@ -68,7 +68,7 @@ public class SurroundPlus extends Module {
 
 
     public SurroundPlus() {
-        super(Orion.CATEGORY, "surround-plus", "Surround v2.");
+        super(UWU.CATEGORY, "surround-plus", "Surround v2.");
     }
 
     @Override

@@ -26,7 +26,7 @@ import org.apache.logging.log4j.Logger;
 import java.lang.invoke.MethodHandles;
 
 
-public class Orion extends MeteorAddon {
+public class UWU extends MeteorAddon {
     public static final Logger LOG = LogManager.getLogger();
     public static final Category CATEGORY = new Category("UWU v1", Items.END_PORTAL_FRAME.getDefaultStack());
     public static final Category CATEGORY1 = new Category("UWU v2", Items.ENDER_EYE.getDefaultStack());
@@ -82,7 +82,7 @@ public class Orion extends MeteorAddon {
         hud.elements.add(new Watermark(hud));
         hud.elements.add(new Welcome(hud));
 
-        Config.get().customWindowTitleText = "UWU CLient - " + Orion.VERSION;
+        Config.get().customWindowTitleText = "UWU CLient - " + UWU.VERSION;
     }
 
     @Override

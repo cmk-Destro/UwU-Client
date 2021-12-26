@@ -1,7 +1,7 @@
 package marius.destropho.uwu.modules.main;
 
 
-import marius.destropho.uwu.Orion;
+import marius.destropho.uwu.UWU;
 import meteordevelopment.meteorclient.events.entity.player.PlayerMoveEvent;
 import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.mixininterface.IVec3d;
@@ -46,7 +46,7 @@ public class StrafePlus extends Module {
     public final Setting<Boolean> onFallFlying = sgAC.add(new BoolSetting.Builder().name("on-fall-flying").description("Uses strafe+ on fall flying.").defaultValue(false).build());
 
     public StrafePlus() {
-        super(Orion.CATEGORY1, "strafe+", "Increase speed and control");
+        super(UWU.CATEGORY1, "strafe+", "Increase speed and control");
     }
 
     private boolean jump() {

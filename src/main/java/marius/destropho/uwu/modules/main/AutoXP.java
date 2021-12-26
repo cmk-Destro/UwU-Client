@@ -1,6 +1,6 @@
 package marius.destropho.uwu.modules.main;
 
-import marius.destropho.uwu.Orion;
+import marius.destropho.uwu.UWU;
 import marius.destropho.uwu.utils.Wrapper;
 import marius.destropho.uwu.utils.player.ArmorUtil;
 import marius.destropho.uwu.utils.player.ItemHelper;
@@ -38,7 +38,7 @@ public class AutoXP extends Module {
     private int slotRefill;
 
     public AutoXP() {
-        super(Orion.CATEGORY, "auto-xp", "Automatically repair your armor.");
+        super(UWU.CATEGORY, "auto-xp", "Automatically repair your armor.");
     }
 
     @Override

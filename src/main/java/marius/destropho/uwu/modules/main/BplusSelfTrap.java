@@ -2,7 +2,7 @@ package marius.destropho.uwu.modules.main;
 
 import marius.destropho.uwu.utils.misc.Timer;
 import marius.ghosttypes.orion.modules.main.*;
-import marius.destropho.uwu.Orion;
+import marius.destropho.uwu.UWU;
 import marius.destropho.uwu.utils.misc.BPlusWorldUtils;
 import meteordevelopment.meteorclient.events.entity.player.FinishUsingItemEvent;
 import meteordevelopment.meteorclient.events.packets.PacketEvent;
@@ -53,7 +53,7 @@ public class BplusSelfTrap extends Module {
     int timeToStart = 0;
 
     public BplusSelfTrap() {
-        super(Orion.CATEGORY1, "self-trap+", "Surrounds your top part in blocks to prevent you from taking lots of damage");
+        super(UWU.CATEGORY1, "self-trap+", "Surrounds your top part in blocks to prevent you from taking lots of damage");
     }
 
     public static void setSurroundWait(int timeToStart) {

@@ -1,7 +1,7 @@
 package marius.destropho.uwu.modules.main;
 
 import it.unimi.dsi.fastutil.objects.Object2BooleanMap;
-import marius.destropho.uwu.Orion;
+import marius.destropho.uwu.UWU;
 import marius.destropho.uwu.utils.player.PlayerHelper;
 import meteordevelopment.meteorclient.events.render.Render2DEvent;
 import meteordevelopment.meteorclient.events.world.TickEvent;
@@ -82,7 +82,7 @@ public class NametagsPlus extends Module {
     private final List<Entity> entityList = new ArrayList<>();
 
     public NametagsPlus() {
-        super(Orion.CATEGORY, "nametags-plus", "Cooler nametags.");
+        super(UWU.CATEGORY, "nametags-plus", "Cooler nametags.");
     }
 
     private static String ticksToTime(int ticks) {

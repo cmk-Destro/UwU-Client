@@ -1,6 +1,6 @@
 package marius.destropho.uwu.modules.main;
 
-import marius.destropho.uwu.Orion;
+import marius.destropho.uwu.UWU;
 import marius.destropho.uwu.utils.Wrapper;
 import marius.destropho.uwu.utils.world.BlockHelper;
 import marius.destropho.uwu.utils.player.AutomationUtils;
@@ -100,7 +100,7 @@ public class BedAura extends Module {
 
 
     public BedAura() {
-        super(Orion.CATEGORY, "bed-aura-plus", "The famous troll module.");
+        super(UWU.CATEGORY, "bed-aura-plus", "The famous troll module.");
     }
 
     @Override

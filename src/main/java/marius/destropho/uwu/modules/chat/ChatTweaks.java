@@ -1,6 +1,6 @@
 package marius.destropho.uwu.modules.chat;
 
-import marius.destropho.uwu.Orion;
+import marius.destropho.uwu.UWU;
 import marius.destropho.uwu.utils.chat.Emotes;
 import meteordevelopment.meteorclient.events.game.SendMessageEvent;
 import meteordevelopment.meteorclient.settings.*;
@@ -34,7 +34,7 @@ public class ChatTweaks extends Module {
     RainbowColor prefixChroma = new RainbowColor();
 
     public ChatTweaks() {
-        super(Orion.CATEGORY, "better-chat-plus", "Various chat improvements.");
+        super(UWU.CATEGORY, "better-chat-plus", "Various chat improvements.");
     }
 
 

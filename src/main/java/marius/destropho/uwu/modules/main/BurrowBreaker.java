@@ -1,6 +1,6 @@
 package marius.destropho.uwu.modules.main;
 
-import marius.destropho.uwu.Orion;
+import marius.destropho.uwu.UWU;
 import marius.destropho.uwu.utils.Wrapper;
 import marius.destropho.uwu.utils.player.AutomationUtils;
 import marius.destropho.uwu.utils.player.ItemHelper;
@@ -36,7 +36,7 @@ public class BurrowBreaker extends Module {
     private boolean wasBurrowed;
 
     public BurrowBreaker() {
-        super(Orion.CATEGORY, "burrow-breaker", "Automatically destroy target's burrow block.");
+        super(UWU.CATEGORY, "burrow-breaker", "Automatically destroy target's burrow block.");
     }
 
     @Override

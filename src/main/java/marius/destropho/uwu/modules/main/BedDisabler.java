@@ -1,6 +1,6 @@
 package marius.destropho.uwu.modules.main;
 
-import marius.destropho.uwu.Orion;
+import marius.destropho.uwu.UWU;
 import marius.destropho.uwu.utils.Wrapper;
 import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.settings.BoolSetting;
@@ -43,7 +43,7 @@ public class BedDisabler extends Module {
 
 
     public BedDisabler() {
-        super(Orion.CATEGORY, "bed-disabler", "Anti bed that works.");
+        super(UWU.CATEGORY, "bed-disabler", "Anti bed that works.");
     }
 
 

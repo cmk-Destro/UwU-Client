@@ -1,6 +1,6 @@
 package marius.destropho.uwu.modules.main;
 
-import marius.destropho.uwu.Orion;
+import marius.destropho.uwu.UWU;
 import marius.destropho.uwu.modules.chat.BurrowAlert;
 import marius.destropho.uwu.utils.Wrapper;
 import marius.destropho.uwu.utils.chat.EzUtil;
@@ -41,7 +41,7 @@ public class AutoRespawn extends Module {
     private int messageI = 0;
 
     public AutoRespawn() {
-        super(Orion.CATEGORY, "auto-respawn", "Automatically respawns after death.");
+        super(UWU.CATEGORY, "auto-respawn", "Automatically respawns after death.");
     }
 
     @EventHandler

@@ -1,6 +1,6 @@
 package marius.destropho.uwu.modules.chat;
 
-import marius.destropho.uwu.Orion;
+import marius.destropho.uwu.UWU;
 import marius.destropho.uwu.utils.player.ArmorUtil;
 import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.settings.DoubleSetting;
@@ -16,7 +16,7 @@ public class ArmorAlert extends Module {
     private final Setting<Double> threshold = sgGeneral.add(new DoubleSetting.Builder().name("durability").description("How low an armor piece needs to be to alert you.").defaultValue(2).min(1).sliderMin(1).sliderMax(100).max(100).build());
 
     public ArmorAlert() {
-        super(Orion.CATEGORY, "armor-alert", "Alerts you when your armor pieces are low.");
+        super(UWU.CATEGORY, "armor-alert", "Alerts you when your armor pieces are low.");
     }
 
     private boolean alertedHelm;

@@ -1,6 +1,6 @@
 package marius.destropho.uwu.modules.main;
 
-import marius.destropho.uwu.Orion;
+import marius.destropho.uwu.UWU;
 import marius.destropho.uwu.utils.misc.SystemTimer;
 import meteordevelopment.meteorclient.events.entity.player.PlayerMoveEvent;
 import meteordevelopment.meteorclient.events.game.GameJoinedEvent;
@@ -324,7 +324,7 @@ public class PacketFly extends Module {
     private static final Random random = new Random();
 
     public PacketFly() {
-        super(Orion.CATEGORY, "packet-fly", "Fly with packets.");
+        super(UWU.CATEGORY, "packet-fly", "Fly with packets.");
     }
 
 

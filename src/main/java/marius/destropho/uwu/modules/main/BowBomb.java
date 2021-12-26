@@ -1,6 +1,6 @@
 package marius.destropho.uwu.modules.main;
 
-import marius.destropho.uwu.Orion;
+import marius.destropho.uwu.UWU;
 import meteordevelopment.meteorclient.events.packets.PacketEvent;
 import meteordevelopment.meteorclient.settings.*;
 import meteordevelopment.meteorclient.systems.modules.Module;
@@ -58,7 +58,7 @@ public class BowBomb extends Module {
     private long lastShootTime;
 
     public BowBomb() {
-        super(Orion.CATEGORY, "bow-bomb", "");
+        super(UWU.CATEGORY, "bow-bomb", "");
     }
 
     @Override

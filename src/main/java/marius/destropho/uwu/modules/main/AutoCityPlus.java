@@ -1,6 +1,6 @@
 package marius.destropho.uwu.modules.main;
 
-import marius.destropho.uwu.Orion;
+import marius.destropho.uwu.UWU;
 import marius.destropho.uwu.utils.Wrapper;
 import marius.destropho.uwu.utils.world.BlockHelper;
 import marius.destropho.uwu.utils.player.AutomationUtils;
@@ -57,7 +57,7 @@ public class AutoCityPlus extends Module {
     private final Setting<SettingColor> lineColor = sgRender.add(new ColorSetting.Builder().name("line-color").description("The line color.").defaultValue(new SettingColor(15, 255, 211)).build());
 
     public AutoCityPlus() {
-        super(Orion.CATEGORY, "auto-city-plus", "Auto city but better.");
+        super(UWU.CATEGORY, "auto-city-plus", "Auto city but better.");
     }
 
     private PlayerEntity target;
