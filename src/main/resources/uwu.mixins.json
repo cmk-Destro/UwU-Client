@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "marius.ghosttypes.orion.mixins",
+  "package": "marius.destropho.uwu.mixins",
   "compatibilityLevel": "JAVA_16",
   "client": [],
   "injectors": {

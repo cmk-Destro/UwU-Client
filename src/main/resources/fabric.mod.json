@@ -1,24 +1,25 @@
 {
   "schemaVersion": 1,
-  "id": "orion",
+  "id": "uwu",
   "version": "${version}",
-  "name": "Orion",
+  "name": "UWU",
   "description": "A combat addon for Meteor Client.",
   "authors": [
-    "GhostTypes"
+    "Destropho"
+    "Marius"
   ],
   "contact": {
-    "repo": "https://github.com/GhostTypes/orion"
+    "discord": "https://discord.gg/24rwFwgcwt"
   },
   "icon": "assets/orion/icon.png",
   "environment": "client",
   "entrypoints": {
     "meteor": [
-      "me.destropho.uwu.Orion"
+      "marius.destropho.uwu.UWU"
     ]
   },
   "mixins": [
-    "orion.mixins.json"
+    "uwu.mixins.json"
   ],
   "depends": {
     "java": ">=16",
