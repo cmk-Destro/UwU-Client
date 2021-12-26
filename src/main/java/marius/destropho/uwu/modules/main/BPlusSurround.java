@@ -1,7 +1,7 @@
 package marius.destropho.uwu.modules.main;
 
 import marius.destropho.uwu.utils.misc.Timer;
-import marius.ghosttypes.orion.modules.main.*;
+import marius.destropho.uwu.modules.main.*;
 import marius.destropho.uwu.UWU;
 import marius.destropho.uwu.utils.misc.BPlusWorldUtils;
 import meteordevelopment.meteorclient.events.packets.PacketEvent;

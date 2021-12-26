@@ -19,7 +19,6 @@ import meteordevelopment.meteorclient.settings.*;
 import meteordevelopment.meteorclient.systems.friends.Friends;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.systems.modules.Modules;
-import meteordevelopment.meteorclient.systems.modules.combat.KillAura;
 import meteordevelopment.meteorclient.utils.entity.EntityUtils;
 import meteordevelopment.meteorclient.utils.entity.Target;
 import meteordevelopment.meteorclient.utils.entity.fakeplayer.FakePlayerManager;
@@ -377,7 +376,7 @@ public class cwystalAuwa extends Module {
         } else blockPos.set(entity.getBlockPos()).move(0, -1, 0);
 
         if (BDamageIgnore.get() == DamageIgnore.Never || (BDamageIgnore.get() == DamageIgnore.SurroundedorBurrowed && !(BPlusEntityUtils.isSurrounded(mc.player) || BPlusEntityUtils.isBurrowed(mc.player)))) {
-            double selfDamage = BPlusDamageUtils.crystalDamage(mc.player, entity.getPos(), predictMovement.get(), blockPos, ignoreTerrain.get());
+            double selfDamage = BPusDamageUtils.crystalDamage(mc.player, entity.getPos(), predictMovement.get(), blockPos, ignoreTerrain.get());
             if (selfDamage > BmaxDamage.get() || (BantiSuicide.get() && selfDamage >= EntityUtils.getTotalHealth(mc.player)))
                 return 0;
         }
@@ -502,7 +501,7 @@ public class cwystalAuwa extends Module {
             if (isOutOfRange(vec3d, blockPos, true)) return;
 
             if (PDamageIgnore.get() == DamageIgnore.Never || (PDamageIgnore.get() == DamageIgnore.SurroundedorBurrowed && !(BPlusEntityUtils.isSurrounded(mc.player) || BPlusEntityUtils.isBurrowed(mc.player)))) {
-                double selfDamage = BPlusDamageUtils.crystalDamage(mc.player, vec3d, predictMovement.get(), bp, ignoreTerrain.get());
+                double selfDamage = BPusDamageUtils.crystalDamage(mc.player, vec3d, predictMovement.get(), bp, ignoreTerrain.get());
                 if (selfDamage > PmaxDamage.get() || (PantiSuicide.get() && selfDamage >= EntityUtils.getTotalHealth(mc.player)))
                     return;
             }
@@ -767,12 +766,12 @@ public class cwystalAuwa extends Module {
         if (fast) {
             PlayerEntity target = getNearestTarget();
             if (!(smartDelay.get() && breaking && target.hurtTime > 0))
-                damage = BPlusDamageUtils.crystalDamage(target, vec3d, predictMovement.get(), obsidianPos, ignoreTerrain.get());
+                damage = BPusDamageUtils.crystalDamage(target, vec3d, predictMovement.get(), obsidianPos, ignoreTerrain.get());
         } else {
             for (PlayerEntity target : targets) {
                 if (smartDelay.get() && breaking && target.hurtTime > 0) continue;
 
-                double dmg = BPlusDamageUtils.crystalDamage(target, vec3d, predictMovement.get(), obsidianPos, ignoreTerrain.get());
+                double dmg = BPusDamageUtils.crystalDamage(target, vec3d, predictMovement.get(), obsidianPos, ignoreTerrain.get());
 
                 if (dmg > bestTargetDamage) {
                     bestTarget = target;

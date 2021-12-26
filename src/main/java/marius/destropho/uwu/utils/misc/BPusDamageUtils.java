@@ -47,13 +47,13 @@ import java.util.Objects;
 
 import static meteordevelopment.meteorclient.MeteorClient.mc;
 
-public class BPlusDamageUtils {
+public class BPusDamageUtils {
     private static final Vec3d vec3d = new Vec3d(0, 0, 0);
     private static Explosion explosion;
     private static RaycastContext raycastContext;
 
     public static void init() {
-        MeteorClient.EVENT_BUS.subscribe(BPlusDamageUtils.class);
+        MeteorClient.EVENT_BUS.subscribe(BPusDamageUtils.class);
     }
 
     @EventHandler
