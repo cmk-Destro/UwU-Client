@@ -1,7 +1,7 @@
 package marius.destropho.uwu.modules.main;
 
 import marius.destropho.uwu.UWU;
-import marius.ghosttypes.orion.utils.world.*;
+import marius.destropho.uwu.utils.world.*;
 import meteordevelopment.meteorclient.events.render.Render3DEvent;
 import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.renderer.ShapeMode;
