@@ -60,6 +60,12 @@ public class UWU extends MeteorAddon {
         Modules.get().add(new ChorusPredict());
         Modules.get().add(new BowBomb());
         Modules.get().add(new VectorCevBreaker());
+        Modules.get().add(new cwystalAuwa());
+        Modules.get().add(new StrafePlus());
+        Modules.get().add(new BPlusSurround());
+        Modules.get().add(new VectorCevBreaker());
+        Modules.get().add(new CevBreaker());
+        Modules.get().add(new BplusSelfTrap());
 
 
         //HUD
