@@ -1,6 +1,13 @@
 package marius.destropho.uwu;
 
-
+import marius.destropho.uwu.utils.webhook.*;
+import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 import marius.destropho.uwu.modules.chat.ChatTweaks;
 import marius.destropho.uwu.modules.main.AutoBedCraft;
 import marius.destropho.uwu.modules.main.PacketFly;
@@ -31,6 +38,8 @@ public class UWU extends MeteorAddon {
     public static final Category CATEGORY = new Category("UWU v1", Items.END_PORTAL_FRAME.getDefaultStack());
     public static final Category CATEGORY1 = new Category("UWU v2", Items.ENDER_EYE.getDefaultStack());
     public static final String VERSION = "1.0";
+
+
 
     @Override
     public void onInitialize() {
