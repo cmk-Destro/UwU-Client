@@ -6,13 +6,13 @@ import marius.destropho.uwu.modules.main.AutoBedCraft;
 import marius.destropho.uwu.modules.main.PacketFly;
 import marius.destropho.uwu.modules.main.SurroundPlus;
 import marius.destropho.uwu.modules.main.VectorCevBreaker;
-import marius.ghosttypes.orion.modules.chat.*;
-import marius.ghosttypes.orion.modules.hud.items.*;
-import marius.ghosttypes.orion.modules.hud.misc.*;
-import marius.ghosttypes.orion.modules.hud.stats.*;
-import marius.ghosttypes.orion.modules.hud.visual.*;
-import marius.ghosttypes.orion.modules.main.*;
-import marius.ghosttypes.orion.modules.player.*;
+import marius.destropho.uwu.modules.chat.*;
+import marius.destropho.uwu.modules.hud.items.*;
+import marius.destropho.uwu.modules.hud.misc.*;
+import marius.destropho.uwu.modules.hud.stats.*;
+import marius.destropho.uwu.modules.hud.visual.*;
+import marius.destropho.uwu.modules.main.*;
+import marius.destropho.uwu.modules.player.*;
 import meteordevelopment.meteorclient.MeteorClient;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
 import meteordevelopment.meteorclient.systems.config.Config;
@@ -30,13 +30,13 @@ public class UWU extends MeteorAddon {
     public static final Logger LOG = LogManager.getLogger();
     public static final Category CATEGORY = new Category("UWU v1", Items.END_PORTAL_FRAME.getDefaultStack());
     public static final Category CATEGORY1 = new Category("UWU v2", Items.ENDER_EYE.getDefaultStack());
-    public static final String VERSION = "0.2";
+    public static final String VERSION = "1.0";
 
     @Override
     public void onInitialize() {
         LOG.info("Initializing UWU Client- Destro on top!");
 
-        MeteorClient.EVENT_BUS.registerLambdaFactory("me.ghosttypes.orion", (lookupInMethod, klass) -> (MethodHandles.Lookup) lookupInMethod.invoke(null, klass, MethodHandles.lookup()));
+        MeteorClient.EVENT_BUS.registerLambdaFactory("marius.destropho.uwu", (lookupInMethod, klass) -> (MethodHandles.Lookup) lookupInMethod.invoke(null, klass, MethodHandles.lookup()));
 
         //Modules
         Modules.get().add(new PacketFly());
