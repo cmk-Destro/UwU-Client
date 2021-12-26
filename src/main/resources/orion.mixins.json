@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "me.ghosttypes.orion.mixins",
+  "package": "marius.ghosttypes.orion.mixins",
   "compatibilityLevel": "JAVA_16",
   "client": [],
   "injectors": {

@@ -14,7 +14,7 @@
   "environment": "client",
   "entrypoints": {
     "meteor": [
-      "me.ghosttypes.orion.Orion"
+      "me.destropho.uwu.Orion"
     ]
   },
   "mixins": [
