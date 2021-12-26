@@ -96,7 +96,6 @@ public class cwystalAuwa extends Module {
     private final Setting<SlowFacePlace> slowFPMode = sgFacePlace.add(new EnumSetting.Builder<SlowFacePlace>().name("slow-FP-mode").description("Mode to use for the slow face place.").defaultValue(SlowFacePlace.Auto).visible(slowFacePlace::get).build());
     private final Setting<Integer> slowFPDelay = sgFacePlace.add(new IntSetting.Builder().name("slow-FP-delay").description("The delay in ticks to wait to break a crystal for custom face place delay.").defaultValue(10).min(0).sliderMin(0).sliderMax(20).visible(() -> slowFacePlace.get() && slowFPMode.get() == SlowFacePlace.Custom).build());
     private final Setting<Boolean> surrHoldPause = sgFacePlace.add(new BoolSetting.Builder().name("Pause-on-surround-hold").description("Will pause face placing when surround hold is active.").defaultValue(true).visible(facePlace::get).build());
-    private final Setting<Boolean> KAPause = sgFacePlace.add(new BoolSetting.Builder().name("Pause-on-KA").description("Will pause face placing when KA is active.").defaultValue(true).visible(facePlace::get).build());
     private final Setting<Boolean> CevPause = sgFacePlace.add(new BoolSetting.Builder().name("Pause-on-Cev-Break").description("Will pause face placing when Cev Breaker is active.").defaultValue(false).visible(facePlace::get).build());
     private final Setting<Boolean> greenHolers = sgFacePlace.add(new BoolSetting.Builder().name("Green-holers").description("Will automatically face-place when target's is in greenhole.").defaultValue(false).visible(facePlace::get).build());
     private final Setting<Boolean> faceSurrounded = sgFacePlace.add(new BoolSetting.Builder().name("face-surrounded").description("Will face-place even when target's face is surrounded.").defaultValue(false).visible(facePlace::get).build());
@@ -665,8 +664,6 @@ public class cwystalAuwa extends Module {
         for (PlayerEntity target : targets) {
             BlockPos pos = target.getBlockPos();
             if (CevPause.get() && Modules.get().isActive(CevBreaker.class)) return false;
-            if (KAPause.get() && (Modules.get().isActive(KillAura.class) || Modules.get().isActive(PostTickKA.class)))
-                return false;
             if (!faceSurrounded.get() && BPlusEntityUtils.isFaceSurrounded(target)) return false;
             if (surrHoldPause.get() && surroundHold.get() && BPlusEntityUtils.isSurroundBroken(target)) return false;
 
