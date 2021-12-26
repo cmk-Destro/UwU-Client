@@ -1,5 +1,6 @@
 package me.ghosttypes.orion.utils.misc;
 
+
 public class SystemTimer {
     private long time;
 

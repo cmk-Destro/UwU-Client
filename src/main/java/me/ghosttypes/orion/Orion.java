@@ -1,44 +1,35 @@
 package me.ghosttypes.orion;
 
 
-import com.sun.jna.platform.win32.LowLevelMonitorConfigurationAPI;
-import me.ghosttypes.orion.modules.player.*;
 import me.ghosttypes.orion.modules.chat.*;
 import me.ghosttypes.orion.modules.hud.items.*;
-import me.ghosttypes.orion.modules.hud.misc.Welcome;
+import me.ghosttypes.orion.modules.hud.misc.*;
 import me.ghosttypes.orion.modules.hud.stats.*;
 import me.ghosttypes.orion.modules.hud.visual.*;
 import me.ghosttypes.orion.modules.main.*;
-import me.ghosttypes.orion.utils.misc.Main;
-import meteordevelopment.meteorclient.addons.MeteorAddon;
+import me.ghosttypes.orion.modules.player.*;
 import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.addons.MeteorAddon;
 import meteordevelopment.meteorclient.systems.config.Config;
 import meteordevelopment.meteorclient.systems.modules.Category;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import meteordevelopment.meteorclient.systems.modules.render.hud.HUD;
-
+import net.minecraft.item.Items;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import net.minecraft.item.Items;
-
 import java.lang.invoke.MethodHandles;
-
-import static meteordevelopment.meteorclient.MeteorClient.mc;
 
 
 public class Orion extends MeteorAddon {
     public static final Logger LOG = LogManager.getLogger();
-    public static final Category CATEGORY = new Category("UWU Client", Items.END_PORTAL_FRAME.getDefaultStack());
-    public static final String VERSION = "0.14";
-    private String username = "If you see this, something is wrong.";
+    public static final Category CATEGORY = new Category("UWU v1", Items.END_PORTAL_FRAME.getDefaultStack());
+    public static final Category CATEGORY1 = new Category("UWU v2", Items.ENDER_EYE.getDefaultStack());
+    public static final String VERSION = "0.2";
 
     @Override
     public void onInitialize() {
-        LOG.info("Initializing Orion");
-
-        username =
-
+        LOG.info("Initializing UWU Client- Destro on top!");
 
         MeteorClient.EVENT_BUS.registerLambdaFactory("me.ghosttypes.orion", (lookupInMethod, klass) -> (MethodHandles.Lookup) lookupInMethod.invoke(null, klass, MethodHandles.lookup()));
 
@@ -63,6 +54,7 @@ public class Orion extends MeteorAddon {
         Modules.get().add(new SurroundPlus());
         Modules.get().add(new ChorusPredict());
         Modules.get().add(new BowBomb());
+        Modules.get().add(new VectorCevBreaker());
 
 
         //HUD
@@ -91,6 +83,8 @@ public class Orion extends MeteorAddon {
     @Override
     public void onRegisterCategories() {
         Modules.registerCategory(CATEGORY);
+        Modules.registerCategory(CATEGORY1);
     }
 
 }
+
